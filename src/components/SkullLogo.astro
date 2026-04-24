@@ -1,0 +1,35 @@
+---
+const { size = 40 } = Astro.props;
+---
+
+<svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Skull Main Shape -->
+  <path d="M50 15 C 30 15, 20 30, 20 50 C 20 65, 30 75, 35 80 L 35 85 Q 35 90, 40 90 L 60 90 Q 65 90, 65 85 L 65 80 C 70 75, 80 65, 80 50 C 80 30, 70 15, 50 15 Z" 
+        stroke="currentColor" stroke-width="2" fill="none" />
+  
+  <!-- Eyes -->
+  <circle cx="38" cy="55" r="7" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.5" />
+  <circle cx="62" cy="55" r="7" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.5" />
+  
+  <!-- Nose -->
+  <path d="M50 65 L 47 72 L 53 72 Z" fill="currentColor" />
+  
+  <!-- Teeth / Jaw lines -->
+  <path d="M42 82 L 42 88" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M50 82 L 50 88" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M58 82 L 58 88" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- Hebrew Letter Shin (ש) on Forehead -->
+  <g transform="translate(42, 28) scale(0.6)">
+    <path d="M0 0 L 2 18 Q 3 20, 5 20 L 20 20 Q 22 20, 23 18 L 25 0" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M12.5 0 L 12.5 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+</svg>
+
+<style>
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--accent-color);
+  }
+</style>
