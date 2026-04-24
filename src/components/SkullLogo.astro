@@ -2,14 +2,13 @@
 const { size = 48 } = Astro.props;
 ---
 
-<img src={import.meta.env.BASE_URL + "/skull-logo.png"} alt="Skull with Aleph" width={size} height={size} class="skull-logo" />
+<img src={import.meta.env.BASE_URL + "/skull-logo.png"} alt="Skull with Shin" width={size} height={size} class="skull-logo" />
 
 <style>
   .skull-logo {
     display: inline-block;
     vertical-align: middle;
     border-radius: 50%;
-    filter: invert(1) brightness(0.75) sepia(1) hue-rotate(-10deg) saturate(0.5);
     object-fit: cover;
   }
 </style>
