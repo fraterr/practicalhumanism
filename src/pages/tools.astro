@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Tools | The Curved Crater">
+	<section>
+		<h1>Tools & Artifacts</h1>
+		<p>
+			A collection of digital instruments designed for observation, calculation, and contemplation.
+		</p>
+		
+		<hr />
+		
+		<div class="artifact">
+			<h2>Digital Pendulum</h2>
+			<p>A simple algorithm for chaotic oscillation.</p>
+			<pre><code>{`function oscillate(t) {
+  return Math.sin(t * Math.PI / 180) * Math.exp(-0.01 * t);
+}`}</code></pre>
+		</div>
+		
+		<div class="artifact">
+			<h2>Gematria Engine</h2>
+			<p><em>Coming soon.</em> A calculator for numeric linguistic analysis.</p>
+		</div>
+		
+		<hr />
+		
+		<p>
+			These tools are provided as-is, for those who know how to use them.
+		</p>
+	</section>
+</BaseLayout>
