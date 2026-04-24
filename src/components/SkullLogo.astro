@@ -2,7 +2,13 @@
 const { size = 48 } = Astro.props;
 ---
 
-<img src={import.meta.env.BASE_URL + "/skull-logo.png"} alt="Skull with Shin" width={size} height={size} class="skull-logo" />
+<img
+  src={import.meta.env.BASE_URL + "/skull-logo.png"}
+  alt="Skull with Shin"
+  width={size}
+  height={size}
+  class="skull-logo"
+/>
 
 <style>
   .skull-logo {
