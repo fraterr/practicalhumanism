@@ -1,4 +1,5 @@
 import scriptureLogo from '../assets/scripture.png';
+import theledateLogo from '../assets/theledate.png';
 
 export interface Tool {
     id: string;
@@ -6,7 +7,7 @@ export interface Tool {
     description: string;
     icon: any; // Using the imported image object
     link: string;
-    category: 'Gematria' | 'Divination' | 'Logic' | 'Other';
+    category: 'Gematria' | 'Divination' | 'Logic' | 'Thelema' | 'Other';
 }
 
 export const tools: Tool[] = [
@@ -17,5 +18,13 @@ export const tools: Tool[] = [
         icon: scriptureLogo,
         link: 'https://scripturecode.org/explorer',
         category: 'Gematria'
+    },
+    {
+        id: 'theledate',
+        title: 'Theledate',
+        description: 'A precision computational calculator for Thelemic date and time.',
+        icon: theledateLogo,
+        link: 'https://fraterr.github.io/thelemicdate',
+        category: 'Thelema'
     }
 ];
