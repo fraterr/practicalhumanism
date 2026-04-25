@@ -66,7 +66,7 @@ const posts = (await getCollection('blog'))
 
 <style>
 	.intro {
-		height: 80vh;
+		height: 50vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -76,25 +76,25 @@ const posts = (await getCollection('blog'))
 	}
 
 	h1 {
-		font-size: clamp(3rem, 10vw, 5rem);
+		font-size: clamp(2.5rem, 8vw, 4rem);
 		letter-spacing: 0.1em;
-		margin-bottom: 1.5rem;
+		margin-bottom: 1rem;
 		font-weight: 300;
 	}
 
 	.tagline {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		opacity: 0.8;
 		max-width: 600px;
 		line-height: 1.6;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 	}
 
 	.quick-links {
 		display: flex;
 		gap: 1.5rem;
 		align-items: center;
-		font-size: 1.1rem;
+		font-size: 1rem;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
 	}
@@ -115,18 +115,18 @@ const posts = (await getCollection('blog'))
 
 	/* Latest Reflections Section */
 	.latest-reflections {
-		max-width: 1000px;
+		max-width: 900px;
 		margin: 0 auto;
-		padding: 10rem 2rem;
+		padding: 4rem 2rem 8rem;
 	}
 
 	.section-header {
 		text-align: center;
-		margin-bottom: 6rem;
+		margin-bottom: 4rem;
 	}
 
 	.subtitle {
-		font-size: 0.8rem;
+		font-size: 0.7rem;
 		letter-spacing: 0.4em;
 		text-transform: uppercase;
 		opacity: 0.5;
@@ -134,19 +134,19 @@ const posts = (await getCollection('blog'))
 	}
 
 	.mini-separator {
-		width: 40px;
+		width: 30px;
 		height: 1px;
 		background: var(--accent-color);
 		border: none;
-		margin: 1.5rem auto 0;
+		margin: 1rem auto 0;
 		opacity: 0.3;
 	}
 
 	.posts-preview {
 		display: flex;
 		flex-direction: column;
-		gap: 5rem;
-		margin-bottom: 6rem;
+		gap: 3.5rem;
+		margin-bottom: 4rem;
 	}
 
 	.home-post-card {
@@ -160,18 +160,18 @@ const posts = (await getCollection('blog'))
 	}
 
 	.post-date {
-		font-size: 0.75rem;
+		font-size: 0.7rem;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
 		opacity: 0.5;
 		display: block;
-		margin-bottom: 1rem;
+		margin-bottom: 0.8rem;
 	}
 
 	h3 {
 		font-family: 'Playfair Display', serif;
-		font-size: 2rem;
-		margin-bottom: 1rem;
+		font-size: 1.8rem;
+		margin-bottom: 0.8rem;
 		transition: color 0.3s ease;
 	}
 
@@ -185,15 +185,15 @@ const posts = (await getCollection('blog'))
 	}
 
 	.home-post-card p {
-		font-size: 1.1rem;
-		line-height: 1.7;
+		font-size: 1.05rem;
+		line-height: 1.6;
 		opacity: 0.7;
 		max-width: 700px;
 	}
 
 	.view-all {
 		text-align: center;
-		margin-top: 4rem;
+		margin-top: 2rem;
 	}
 
 	.cta-button {
