@@ -23,18 +23,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			</div>
 
 			<div class="sigil-anchor">
-				<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<!-- Elegant Cranium -->
-					<path d="M30 10C20.0589 10 12 18.0589 12 28C12 33.5 14.5 38.5 18.5 41.5V48C18.5 49.6569 19.8431 51 21.5 51H38.5C40.1569 51 51.5 49.6569 51.5 48V41.5C55.5 38.5 58 33.5 58 28C58 18.0589 39.9411 10 30 10Z" stroke="currentColor" stroke-width="1" />
-					<!-- Geometric Eyes -->
-					<circle cx="22" cy="30" r="3" stroke="currentColor" stroke-width="1" />
-					<circle cx="38" cy="30" r="3" stroke="currentColor" stroke-width="1" />
-					<!-- Esoteric Nose (Triangular) -->
-					<path d="M30 35L27 40H33L30 35Z" fill="currentColor" opacity="0.8" />
-					<!-- Teeth/Jaw Details -->
-					<path d="M25 45H35M25 48H35M30 45V51" stroke="currentColor" stroke-width="1" opacity="0.6" />
-					<!-- Halo/Rays -->
-					<circle cx="30" cy="28" r="22" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.3" />
+				<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M12 2C7.58172 2 4 5.58172 4 10C4 12.8906 5.54098 15.4214 7.8207 16.7735C8.42301 17.1307 8.5 17.8924 8.5 18.5V20C8.5 21.1046 9.39543 22 10.5 22H13.5C14.6046 22 15.5 21.1046 15.5 20V18.5C15.5 17.8924 15.577 17.1307 16.1793 16.7735C18.459 15.4214 20 12.8906 20 10C20 5.58172 16.4183 2 12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+					<circle cx="9" cy="11" r="1.5" fill="currentColor"/>
+					<circle cx="15" cy="11" r="1.5" fill="currentColor"/>
+					<path d="M12 14L11.5 16H12.5L12 14Z" fill="currentColor"/>
 				</svg>
 			</div>
 
@@ -142,15 +135,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	.sigil-anchor {
 		color: var(--accent-color);
-		opacity: 0.8;
+		opacity: 0.6;
 		margin: 2rem 0;
 		display: flex;
 		justify-content: center;
-		transition: transform 0.5s ease;
-	}
-
-	.sigil-anchor:hover {
-		transform: scale(1.1);
 	}
 
 	.closing {
