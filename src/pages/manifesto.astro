@@ -23,11 +23,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			</div>
 
 			<div class="sigil-anchor">
-				<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M12 2C7.58172 2 4 5.58172 4 10C4 12.8906 5.54098 15.4214 7.8207 16.7735C8.42301 17.1307 8.5 17.8924 8.5 18.5V20C8.5 21.1046 9.39543 22 10.5 22H13.5C14.6046 22 15.5 21.1046 15.5 20V18.5C15.5 17.8924 15.577 17.1307 16.1793 16.7735C18.459 15.4214 20 12.8906 20 10C20 5.58172 16.4183 2 12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-					<circle cx="9" cy="11" r="1.5" fill="currentColor"/>
-					<circle cx="15" cy="11" r="1.5" fill="currentColor"/>
-					<path d="M12 14L11.5 16H12.5L12 14Z" fill="currentColor"/>
+				<svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+					<!-- Cranium -->
+					<path d="M12 2C7.58172 2 4 5.58172 4 10C4 12.8906 5.54098 15.4214 7.8207 16.7735" />
+					<path d="M16.1793 16.7735C18.459 15.4214 20 12.8906 20 10C20 5.58172 16.4183 2 12 2Z" />
+					<!-- Eyes -->
+					<circle cx="8" cy="10" r="2" />
+					<circle cx="16" cy="10" r="2" />
+					<!-- Nose (Inverted V) -->
+					<path d="M12 12.5L10.5 15M12 12.5L13.5 15" />
+					<!-- Geometric Jaw -->
+					<path d="M8 17.5V20C8 21.1 8.9 22 10 22H14C15.1 22 16 21.1 16 20V17.5" />
+					<!-- Internal Logic Lines -->
+					<path d="M12 2V6" opacity="0.4" />
+					<path d="M4 10H8" opacity="0.4" />
+					<path d="M16 10H20" opacity="0.4" />
 				</svg>
 			</div>
 
