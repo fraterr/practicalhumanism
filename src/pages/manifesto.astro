@@ -15,22 +15,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 		<div class="manifesto-text">
 			<p class="emphasized">
-				I stand where the Ageless Wisdom intersects with the exactitudes of modern logic. 
-				What I term <strong>Practical Humanism</strong> is a definite, pragmatic Method for the deliberate unfolding of human potential. 
-				I recognize that the present human form is not an ultimate completion, but an intermediate stage.
+				I stand where the Ageless Wisdom intersects<br />
+				with the exactitudes of modern logic.
+			</p>
+			
+			<p>
+				What I term <strong>Practical Humanism</strong> is a definite,<br />
+				pragmatic Method for the deliberate unfolding<br />
+				of human potential.
+			</p>
+			
+			<p>
+				I recognize that the present human form is not<br />
+				an ultimate completion, but an intermediate stage.
 			</p>
 
 			<div class="separator">
 				<span>✧</span>
 			</div>
 
-			<p>
-				I cast aside nothing of the ancient tools; rather, I adapt them to present necessities.
+			<p class="middle-statement">
+				I cast aside nothing of the ancient tools;<br />
+				rather, I adapt them to present necessities.
 			</p>
 
 			<p>
-				By applying these traditional instruments with a strictly practical, testing attitude, 
-				I aim to awaken the dormant centers of the personality.
+				By applying these traditional instruments with a strictly<br />
+				practical, testing attitude, I aim to awaken the<br />
+				dormant centers of the personality.
 			</p>
 
 			<div class="separator">
@@ -38,9 +50,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			</div>
 
 			<p class="closing">
-				To make of my own vehicle a living laboratory of evolution. 
-				The Work demands the balanced development of the entire being: 
-				the purification of the mind, the direction of the Will, 
+				The ultimate aim is to make of my own vehicle<br />
+				a living laboratory of evolution.
+			</p>
+			
+			<p class="closing-details">
+				The Work demands the balanced development of the entire being:<br />
+				the purification of the mind, the direction of the Will,<br />
 				and the conscious realization of the Indwelling Spirit.
 			</p>
 		</div>
@@ -89,30 +105,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	}
 	.manifesto-text {
 		font-size: 1.25rem;
-		line-height: 2;
+		line-height: 1.8;
 		color: var(--text-color);
 		text-align: center;
 	}
 	.manifesto-text p {
-		margin-bottom: 2.5rem;
+		margin-bottom: 3rem;
 	}
 	.emphasized {
-		font-size: 1.4rem;
-		line-height: 1.8;
-	}
-	.separator {
-		margin: 4rem 0;
-		color: var(--accent-color);
-		font-size: 1.2rem;
-		opacity: 0.5;
-	}
-	.closing {
 		font-family: 'Playfair Display', serif;
+		font-size: 1.8rem;
+		line-height: 1.4;
+		color: var(--accent-color);
+	}
+	.middle-statement {
 		font-style: italic;
 		font-size: 1.4rem;
 	}
+	.separator {
+		margin: 5rem 0;
+		color: var(--accent-color);
+		font-size: 1.4rem;
+		opacity: 0.6;
+	}
+	.closing {
+		font-family: 'Playfair Display', serif;
+		font-size: 1.8rem;
+		line-height: 1.4;
+		color: var(--accent-color);
+		margin-bottom: 1.5rem !important;
+	}
+	.closing-details {
+		font-size: 1.2rem;
+		opacity: 0.9;
+		line-height: 2;
+	}
 	footer hr {
-		margin-top: 5rem;
+		margin-top: 6rem;
 		opacity: 0.2;
 	}
 
@@ -121,17 +150,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			font-size: 2.5rem;
 		}
 		.manifesto-quote {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 			margin-bottom: 3rem;
 		}
 		.manifesto-text {
-			font-size: 1.1rem;
+			font-size: 1rem;
 		}
 		.emphasized {
+			font-size: 1.4rem;
+		}
+		.middle-statement {
 			font-size: 1.2rem;
 		}
 		.closing {
-			font-size: 1.2rem;
+			font-size: 1.4rem;
+		}
+		.closing-details {
+			font-size: 1rem;
 		}
 	}
 </style>
