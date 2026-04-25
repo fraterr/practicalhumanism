@@ -4,104 +4,130 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Manifesto | Practical Humanism">
 	<article class="manifesto-container">
-		<header class="manifesto-header">
+		<header class="manifesto-header reveal">
 			<h1>Manifesto</h1>
 		</header>
 		
-		<blockquote class="manifesto-quote">
+		<blockquote class="manifesto-quote reveal">
 			"Man is a transitional being, he is not final; for in him and high beyond him ascend the radiant degrees which climb to a divine supermanhood." 
 			<cite>— Sri Aurobindo</cite>
 		</blockquote>
 
 		<div class="manifesto-text">
-			<p class="emphasized">
+			<p class="emphasized reveal">
 				I stand where the Ageless Wisdom intersects<br />
 				with the exactitudes of modern logic.
 			</p>
 			
-			<p>
+			<p class="reveal">
 				What I term <strong>Practical Humanism</strong> is a definite,<br />
 				pragmatic Method for the deliberate unfolding<br />
 				of human potential.
 			</p>
 			
-			<p>
+			<p class="reveal">
 				I recognize that the present human form is not<br />
 				an ultimate completion, but an intermediate stage.
 			</p>
 
-			<div class="separator">
-				<span>✧</span>
+			<div class="sigil-separator reveal">
+				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="20" y="0" width="1" height="40" fill="currentColor" />
+					<rect x="0" y="20" width="40" height="1" fill="currentColor" />
+					<rect x="20" y="20" width="15" height="15" transform="rotate(-45 20 20)" border="1" stroke="currentColor" />
+				</svg>
 			</div>
 
-			<p class="middle-statement">
+			<p class="middle-statement reveal">
 				I cast aside nothing of the ancient tools;<br />
 				rather, I adapt them to present necessities.
 			</p>
 
-			<p>
+			<p class="reveal">
 				By applying these traditional instruments with a strictly<br />
 				practical, testing attitude, I aim to awaken the<br />
 				dormant centers of the personality.
 			</p>
 
-			<div class="separator">
-				<span>✧</span>
+			<div class="sigil-separator reveal">
+				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="20" y="0" width="1" height="40" fill="currentColor" />
+					<rect x="0" y="20" width="40" height="1" fill="currentColor" />
+					<rect x="20" y="20" width="15" height="15" transform="rotate(-45 20 20)" border="1" stroke="currentColor" />
+				</svg>
 			</div>
 
-			<p class="closing">
+			<p class="closing reveal">
 				The ultimate aim is to make of my own vehicle<br />
 				a living laboratory of evolution.
 			</p>
 			
-			<p class="closing-details">
+			<p class="closing-details reveal">
 				The Work demands the balanced development of the entire being:<br />
 				the purification of the mind, the direction of the Will,<br />
 				and the conscious realization of the Indwelling Spirit.
 			</p>
 		</div>
 
-		<footer>
+		<footer class="reveal">
 			<hr />
 		</footer>
 	</article>
+
+	<script>
+		const observerOptions = {
+			threshold: 0.1
+		};
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('active');
+				}
+			});
+		}, observerOptions);
+
+		document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+	</script>
 </BaseLayout>
 
 <style>
 	.manifesto-container {
 		max-width: 650px;
 		margin: 0 auto;
-		padding: 2rem 0;
+		padding: 4rem 0;
 	}
 	.manifesto-header {
 		text-align: center;
-		margin-bottom: 4rem;
+		margin-bottom: 6rem;
 	}
 	.manifesto-header h1 {
-		font-size: 3.5rem;
-		letter-spacing: 0.1em;
+		font-size: 4rem;
+		letter-spacing: 0.4em;
 		text-transform: uppercase;
 		color: var(--text-color);
 		margin: 0;
+		font-weight: 300;
 	}
 	.manifesto-quote {
-		margin: 0 0 5rem 0;
+		margin: 0 0 6rem 0;
 		font-size: 1.5rem;
-		line-height: 1.5;
+		line-height: 1.6;
 		font-style: italic;
 		color: var(--accent-muted);
 		text-align: center;
 		border: none;
 		padding: 0;
+		opacity: 0.8;
 	}
 	.manifesto-quote cite {
 		display: block;
-		margin-top: 1.5rem;
-		font-size: 1rem;
+		margin-top: 2rem;
+		font-size: 0.9rem;
 		font-style: normal;
-		letter-spacing: 0.2em;
+		letter-spacing: 0.3em;
 		text-transform: uppercase;
-		opacity: 0.7;
+		opacity: 0.6;
 	}
 	.manifesto-text {
 		font-size: 1.25rem;
@@ -110,63 +136,78 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		text-align: center;
 	}
 	.manifesto-text p {
-		margin-bottom: 3rem;
+		margin-bottom: 3.5rem;
+		opacity: 0.85;
+		transition: opacity 0.5s ease;
+	}
+	.manifesto-text p strong {
+		color: var(--text-color);
+		opacity: 1;
 	}
 	.emphasized {
 		font-family: 'Playfair Display', serif;
-		font-size: 1.8rem;
+		font-size: 2rem;
 		line-height: 1.4;
-		color: var(--accent-color);
+		color: var(--accent-color) !important;
+		opacity: 1 !important;
 	}
 	.middle-statement {
 		font-style: italic;
-		font-size: 1.4rem;
+		font-size: 1.6rem;
+		color: var(--text-color);
 	}
-	.separator {
-		margin: 5rem 0;
+	.sigil-separator {
+		margin: 6rem 0;
 		color: var(--accent-color);
-		font-size: 1.4rem;
-		opacity: 0.6;
+		display: flex;
+		justify-content: center;
+		opacity: 0.4;
 	}
 	.closing {
 		font-family: 'Playfair Display', serif;
-		font-size: 1.8rem;
+		font-size: 2rem;
 		line-height: 1.4;
-		color: var(--accent-color);
+		color: var(--accent-color) !important;
+		opacity: 1 !important;
 		margin-bottom: 1.5rem !important;
 	}
 	.closing-details {
-		font-size: 1.2rem;
-		opacity: 0.9;
+		font-size: 1.25rem;
+		opacity: 0.8;
 		line-height: 2;
 	}
 	footer hr {
-		margin-top: 6rem;
-		opacity: 0.2;
+		margin-top: 8rem;
+		opacity: 0.1;
+	}
+
+	/* Reveal Animation */
+	.reveal {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	.reveal.active {
+		opacity: 1;
+		transform: translateY(0);
 	}
 
 	@media (max-width: 768px) {
 		.manifesto-header h1 {
 			font-size: 2.5rem;
+			letter-spacing: 0.2em;
 		}
 		.manifesto-quote {
 			font-size: 1.1rem;
-			margin-bottom: 3rem;
 		}
 		.manifesto-text {
-			font-size: 1rem;
+			font-size: 1.1rem;
 		}
-		.emphasized {
-			font-size: 1.4rem;
+		.emphasized, .closing {
+			font-size: 1.6rem;
 		}
 		.middle-statement {
-			font-size: 1.2rem;
-		}
-		.closing {
-			font-size: 1.4rem;
-		}
-		.closing-details {
-			font-size: 1rem;
+			font-size: 1.3rem;
 		}
 	}
 </style>
