@@ -10,7 +10,7 @@ I wanted to share some thoughts and a detailed meditation I’ve been working on
 By closely observing the specific elements and symbols of the card, we can extract the foundational steps required to materialize what we will. 
 
 ## The Roses Above
-[![The Roses Above](https://pasteboard.co/k51isLqpHiDS.png)](https://pasteboard.co/k51isLqpHiDS.png)
+![The Roses Above](../../assets/rosesabove.png)
 
 At the top of the card, we see an arbor of red roses, which represent our desires. Notice there are exactly 5 of them, corresponding to our 5 physical senses. Their placement in the upper canopy of the card, suspended above and away from the physical body, indicates that the use of these 5 senses must first occur on another, subtler plane. 
 
