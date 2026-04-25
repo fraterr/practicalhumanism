@@ -3,103 +3,134 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Manifesto | Practical Humanism">
-	<section class="manifesto-content">
-		<h1>Manifesto</h1>
+	<article class="manifesto-container">
+		<header class="manifesto-header">
+			<h1>Manifesto</h1>
+		</header>
 		
-		<blockquote class="lead-quote">
+		<blockquote class="manifesto-quote">
 			"Man is a transitional being, he is not final; for in him and high beyond him ascend the radiant degrees which climb to a divine supermanhood." 
 			<cite>— Sri Aurobindo</cite>
 		</blockquote>
 
-		<p class="intro-text">
-			I stand where the Ageless Wisdom intersects with the exactitudes of modern logic. 
-			What I term <strong>Practical Humanism</strong> is no mere philosophical speculation; 
-			it is a definite, pragmatic Method for the deliberate unfolding of human potential.
-		</p>
+		<div class="manifesto-text">
+			<p class="emphasized">
+				I stand where the Ageless Wisdom intersects with the exactitudes of modern logic. 
+				What I term <strong>Practical Humanism</strong> is a definite, pragmatic Method for the deliberate unfolding of human potential. 
+				I recognize that the present human form is not an ultimate completion, but an intermediate stage.
+			</p>
 
-		<div class="manifesto-section">
-			<h2>The Law of Transition</h2>
+			<div class="separator">
+				<span>✧</span>
+			</div>
+
 			<p>
-				I recognize that the present human form is not an ultimate completion, but an intermediate stage. 
-				The individual is the living bridge between the mechanical past and the radiant destiny of the True Self. 
-				My aim is to hasten this Great Work, passing consciously from the bondage of automatic reaction into the mastery of deliberate creation.
+				I cast aside nothing of the ancient tools; rather, I adapt them to present necessities.
+			</p>
+
+			<p>
+				By applying these traditional instruments with a strictly practical, testing attitude, 
+				I aim to awaken the dormant centers of the personality.
+			</p>
+
+			<div class="separator">
+				<span>✧</span>
+			</div>
+
+			<p class="closing">
+				To make of my own vehicle a living laboratory of evolution. 
+				The Work demands the balanced development of the entire being: 
+				the purification of the mind, the direction of the Will, 
+				and the conscious realization of the Indwelling Spirit.
 			</p>
 		</div>
 
-		<div class="manifesto-section">
-			<h2>The Synergetic Instruments</h2>
-			<p>
-				I cast aside nothing of the ancient tools; rather, I adapt them to present necessities. 
-				Meditation, deliberate visualization, and concentrated contemplation are not relics of a dead past—they are the exact sciences of consciousness. 
-				The Tarot, the Qabalah, and Yoga are not superstitions; they are precise blueprints of the inner constitution of Man. 
-				By applying these traditional instruments with a strictly practical, testing attitude, I aim to awaken the dormant centers of the personality.
-			</p>
-		</div>
-
-		<div class="manifesto-section">
-			<h2>The Ultimate Aim</h2>
-			<p>
-				To make of my own vehicle a living laboratory of evolution. The Work demands the balanced development of the entire being: 
-				the purification of the mental body, the direction of the Will, and the conscious realization of the Indwelling Spirit. 
-				I take up the tools of the Builder, knowing that I am the sole architect of my own ascent.
-			</p>
-		</div>
-
-		<hr />
-	</section>
+		<footer>
+			<hr />
+		</footer>
+	</article>
 </BaseLayout>
 
 <style>
-	.manifesto-content {
-		max-width: 700px;
+	.manifesto-container {
+		max-width: 650px;
 		margin: 0 auto;
+		padding: 2rem 0;
 	}
-	.lead-quote {
-		margin: 3rem 0;
-		font-size: 1.4rem;
-		line-height: 1.4;
-		border-left: 3px solid var(--accent-color);
-		padding-left: 2rem;
+	.manifesto-header {
+		text-align: center;
+		margin-bottom: 4rem;
 	}
-	.lead-quote cite {
+	.manifesto-header h1 {
+		font-size: 3.5rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--text-color);
+		margin: 0;
+	}
+	.manifesto-quote {
+		margin: 0 0 5rem 0;
+		font-size: 1.5rem;
+		line-height: 1.5;
+		font-style: italic;
+		color: var(--accent-muted);
+		text-align: center;
+		border: none;
+		padding: 0;
+	}
+	.manifesto-quote cite {
 		display: block;
-		margin-top: 1rem;
+		margin-top: 1.5rem;
 		font-size: 1rem;
 		font-style: normal;
-		color: var(--accent-muted);
-		font-family: 'Inter', sans-serif;
-	}
-	.intro-text {
-		font-size: 1.2rem;
-		line-height: 1.8;
-		margin-bottom: 4rem;
-		color: var(--text-color);
-	}
-	.manifesto-section {
-		margin-bottom: 3.5rem;
-	}
-	.manifesto-section h2 {
-		color: var(--accent-color);
-		letter-spacing: 0.05em;
+		letter-spacing: 0.2em;
 		text-transform: uppercase;
-		font-size: 1.4rem;
-		border-bottom: 1px solid var(--line-color);
-		display: inline-block;
-		margin-bottom: 1.5rem;
+		opacity: 0.7;
 	}
-	.manifesto-section p {
+	.manifesto-text {
+		font-size: 1.25rem;
+		line-height: 2;
+		color: var(--text-color);
+		text-align: center;
+	}
+	.manifesto-text p {
+		margin-bottom: 2.5rem;
+	}
+	.emphasized {
+		font-size: 1.4rem;
 		line-height: 1.8;
+	}
+	.separator {
+		margin: 4rem 0;
+		color: var(--accent-color);
+		font-size: 1.2rem;
+		opacity: 0.5;
+	}
+	.closing {
+		font-family: 'Playfair Display', serif;
+		font-style: italic;
+		font-size: 1.4rem;
+	}
+	footer hr {
+		margin-top: 5rem;
+		opacity: 0.2;
 	}
 
 	@media (max-width: 768px) {
-		.lead-quote {
-			font-size: 1.2rem;
-			padding-left: 1.5rem;
+		.manifesto-header h1 {
+			font-size: 2.5rem;
 		}
-		.intro-text {
+		.manifesto-quote {
+			font-size: 1.2rem;
+			margin-bottom: 3rem;
+		}
+		.manifesto-text {
 			font-size: 1.1rem;
 		}
-		.manifesto-section h2 {
+		.emphasized {
+			font-size: 1.2rem;
+		}
+		.closing {
 			font-size: 1.2rem;
 		}
 	}
