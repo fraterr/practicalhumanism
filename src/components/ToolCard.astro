@@ -12,7 +12,7 @@ const { title, description, icon, link, category } = Astro.props;
 
 <div class="tool-card reveal">
 	<div class="tool-icon">
-		<img src={import.meta.env.BASE_URL + icon} alt={title} width="64" height="64" />
+		<img src={typeof icon === 'string' ? (import.meta.env.BASE_URL + icon) : icon.src} alt={title} width="64" height="64" />
 	</div>
 	<div class="tool-info">
 		<span class="category">{category}</span>
