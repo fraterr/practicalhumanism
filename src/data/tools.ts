@@ -12,7 +12,7 @@ export const tools: Tool[] = [
         id: 'scripture-code',
         title: 'Scripture Code',
         description: 'An explorer to study and search Bible Gematria.',
-        icon: '/assets/scripture.png',
+        icon: 'assets/scripture.png',
         link: 'https://scripturecode.org/explorer',
         category: 'Gematria'
     }
