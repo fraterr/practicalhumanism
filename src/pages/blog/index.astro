@@ -1,114 +1,185 @@
 ---
-import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
-import BaseHead from '../../components/BaseHead.astro';
-import Footer from '../../components/Footer.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
-import Header from '../../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 960px;
+<BaseLayout title="Blog | Practical Humanism" description="Thoughts, reflections and laboratory notes from the intersection of code and consciousness.">
+	<div class="blog-container">
+		<header class="blog-header reveal">
+			<h1>Reflections</h1>
+			<p>
+				A collection of laboratory notes, philosophical inquiries, and 
+				meditations on the technological unfolding of human potential.
+			</p>
+		</header>
+
+		<div class="posts-grid">
+			{
+				posts.map((post) => (
+					<article class="post-card reveal">
+						<div class="post-meta">
+							<span class="date">
+								<FormattedDate date={post.data.pubDate} />
+							</span>
+						</div>
+						<a href={`${import.meta.env.BASE_URL}/blog/${post.id}/`} class="post-link">
+							<h2>{post.data.title}</h2>
+						</a>
+						<p class="description">{post.data.description}</p>
+						<a href={`${import.meta.env.BASE_URL}/blog/${post.id}/`} class="read-more">
+							Read Reflection →
+						</a>
+					</article>
+				))
 			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
+		</div>
+
+		<footer class="blog-footer reveal">
+			<p>Words are artifacts of thought. Use them wisely.</p>
+		</footer>
+	</div>
+
+	<script>
+		const observerOptions = { threshold: 0.1 };
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('active');
 				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+			});
+		}, observerOptions);
+
+		document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+	</script>
+</BaseLayout>
+
+<style>
+	.blog-container {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 6rem 2rem;
+	}
+
+	.blog-header {
+		text-align: center;
+		margin-bottom: 8rem;
+	}
+
+	.blog-header h1 {
+		font-size: clamp(2.5rem, 8vw, 4rem);
+		letter-spacing: 0.4em;
+		text-transform: uppercase;
+		margin-bottom: 2rem;
+		font-weight: 300;
+	}
+
+	.blog-header p {
+		font-size: 1.2rem;
+		max-width: 600px;
+		margin: 0 auto;
+		opacity: 0.7;
+		line-height: 1.8;
+	}
+
+	.posts-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 6rem;
+		margin-bottom: 8rem;
+	}
+
+	.post-card {
+		position: relative;
+		padding-bottom: 4rem;
+		border-bottom: 1px solid rgba(196, 139, 93, 0.1);
+	}
+
+	.post-meta {
+		margin-bottom: 1rem;
+	}
+
+	.date {
+		font-size: 0.8rem;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: var(--accent-color);
+		opacity: 0.6;
+	}
+
+	.post-link {
+		text-decoration: none;
+		color: inherit;
+		display: inline-block;
+	}
+
+	h2 {
+		font-family: 'Playfair Display', serif;
+		font-size: clamp(1.8rem, 5vw, 2.8rem);
+		margin: 0.5rem 0 1.5rem 0;
+		line-height: 1.2;
+		transition: color 0.3s ease;
+	}
+
+	.post-link:hover h2 {
+		color: var(--accent-color);
+	}
+
+	.description {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		opacity: 0.7;
+		margin-bottom: 2rem;
+		max-width: 700px;
+	}
+
+	.read-more {
+		font-size: 0.9rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--accent-color);
+		text-decoration: none;
+		font-weight: 500;
+		border-bottom: 1px solid transparent;
+		padding-bottom: 2px;
+		transition: all 0.3s ease;
+	}
+
+	.read-more:hover {
+		border-bottom-color: var(--accent-color);
+	}
+
+	.blog-footer {
+		text-align: center;
+		opacity: 0.4;
+		font-style: italic;
+		padding-top: 4rem;
+	}
+
+	/* Reveal Animation */
+	.reveal {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	.reveal.active {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	@media (max-width: 768px) {
+		.blog-container {
+			padding: 4rem 1.5rem;
+		}
+		.blog-header {
+			margin-bottom: 4rem;
+		}
+		.posts-grid {
+			gap: 4rem;
+		}
+	}
+</style>
