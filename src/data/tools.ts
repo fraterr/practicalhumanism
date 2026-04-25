@@ -1,5 +1,5 @@
 import scriptureLogo from '../assets/scripture.png';
-import treeOfLifeLogo from '../assets/tree_of_life.svg';
+import hexagramLogo from '../assets/thelemic_hexagram.png';
 
 export interface Tool {
     id: string;
@@ -23,7 +23,7 @@ export const tools: Tool[] = [
         id: 'theledate',
         title: 'Theledate',
         description: 'A precision computational calculator for Thelemic date and time.',
-        icon: treeOfLifeLogo,
+        icon: hexagramLogo,
         link: 'https://fraterr.github.io/thelemicdate',
         category: 'Thelema'
     }
