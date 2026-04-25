@@ -6,10 +6,10 @@ interface Props {
 	description: string;
 	icon: any;
 	link: string;
-	category: string;
+	categories: string[];
 }
 
-const { title, description, icon, link, category } = Astro.props;
+const { title, description, icon, link, categories } = Astro.props;
 ---
 
 <div class="tool-card reveal">
@@ -21,7 +21,14 @@ const { title, description, icon, link, category } = Astro.props;
 		)}
 	</div>
 	<div class="tool-info">
-		<span class="category">{category}</span>
+		<div class="categories">
+			{categories.map((cat, i) => (
+				<>
+					<span class="category">{cat}</span>
+					{i < categories.length - 1 && <span class="separator">/</span>}
+				</>
+			))}
+		</div>
 		<h3>{title}</h3>
 		<p>{description}</p>
 		<a href={link} class="tool-link" target="_blank" rel="noopener noreferrer">Open Tool →</a>
@@ -66,14 +73,26 @@ const { title, description, icon, link, category } = Astro.props;
 		opacity: 1;
 	}
 
+	.categories {
+		display: flex;
+		gap: 0.5rem;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 0.5rem;
+	}
+
 	.category {
 		font-size: 0.7rem;
 		text-transform: uppercase;
 		letter-spacing: 0.25em;
 		color: var(--accent-color);
 		opacity: 0.6;
-		display: block;
-		margin-bottom: 0.5rem;
+	}
+
+	.separator {
+		font-size: 0.7rem;
+		color: var(--accent-color);
+		opacity: 0.3;
 	}
 
 	h3 {
