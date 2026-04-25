@@ -21,7 +21,7 @@ Venus represents the magnetic, attractive force of emotion that pulls the unform
 These same roses appear in Key 8, where, woven into a garland, they represent the chain of sensory-rich suggestions used to bind and direct the animal nature of the Subconscious.
 
 ## The Closed Eyes
-[![The Closed Eyes](https://pasteboard.co/JnlXNql8btHS.png)](https://pasteboard.co/JnlXNql8btHS.png)
+![The Closed Eyes](../../assets/closed.png)
 
 The Magician’s operation is entirely internal. By closing his eyes (or disengaging physical sight), he is actively and consciously renouncing the deception of The Devil (Key 15), who insists that "only what is seen physically exists" and that we are bound by our current circumstances. 
 
@@ -30,14 +30,14 @@ Closing his eyes means refusing to give credit to outward physical appearances o
 > Recent studies confirm that simply closing the eyes naturally induces this receptive alpha state.
 
 ## The Lemniscate
-[![The Lemniscate](https://pasteboard.co/vBBCzLOOgIZQ.png)](https://pasteboard.co/vBBCzLOOgIZQ.png)
+![The Lemniscate](../../assets/lemniscate.png)
 
 Hovering above the Magician’s head is the horizontal figure eight, the symbol of infinity and the Holy Spirit. The number 8 is directly linked to Key 8, indicating the Law of Suggestion. Furthermore, the infinity symbol represents a continuous, rhythmic loop. This is a direct, practical instruction regarding the "chain of suggestions": **Repeat your carefully selected, sensory-rich scene on a loop in your imagination.** 
 
 The subconscious mind learns and is molded through rhythmic repetition. A fleeting thought of desire is not enough; it is the rhythmic, repetitive impressing of the image that carves a deep groove into the astral substance, compelling the subconscious to act upon it.
 
 ## The White Headband
-[![The White Headband](https://pasteboard.co/RK9YvM0YPFKB.png)](https://pasteboard.co/RK9YvM0YPFKB.png)
+![The White Headband](../../assets/band.png)
 
 The band encircling his forehead represents an enclosure, a boundary, a protective perimeter. The Magician has consciously chosen exactly what he wants to achieve, and he has done so by deliberately circumscribing his field of attention, locking out ignorance and distractions. 
 
@@ -46,26 +46,26 @@ The white band indicates the absolute silence of random, contradictory thoughts 
 In the Qabalistic tradition, this concept of a literal "fence" or enclosure is tied directly to the Hebrew letter Cheth, whose corresponding function is Speech. **Words are the ultimate fence.** Precise words create sharp, unmistakable boundaries for your mental scene. Therefore, do not limit yourself to vaguely thinking about what you want; you must actively translate your desire into a short, highly defined, and concise sentence. 
 
 ## The Red Tunic
-[![The Red Tunic](https://pasteboard.co/cJkUYW9cJ0fP.png)](https://pasteboard.co/cJkUYW9cJ0fP.png)
+![The Red Tunic](../../assets/redtunic.png)
 
 This vibrant mantle reveals a beautiful paradox: even though the Magician appears physically still and deeply concentrated, he is a center of immense, vibrant activity. Red is the color of Mars, representing dynamic action, vitality, and passion. Yet, he wears this active red over a pure white undergarment (representing Kether and pure spiritual motive). The very silencing of his outward personality and the purification of his inner motives are what transform him into an unobstructed, highly active channel for the Life Power to rush through.
 
 ## The White Wand
-[![The White Wand](https://pasteboard.co/xwoX448Q7sDF.png)](https://pasteboard.co/xwoX448Q7sDF.png)
+![The White Wand](../../assets/wand.png)
 
 Raised toward heaven, the white wand shows that the Magician draws his Force from above, from the Superconscious plane, not from his own personal ego. Concentration is simply the focusing of units of Life Power. This vital energy, drawn down by the Magician's focused attention, is what will vivify and breathe life into the mental molds of his desire. 
 
 This is a tremendous relief: you do not have to force the manifestation to happen through sheer personal willpower. You simply provide the focus, and the Superconscious provides the boundless power.
 
 ## The Garden
-[![The Garden](https://pasteboard.co/3NQzNx3LDwp9.png)](https://pasteboard.co/3NQzNx3LDwp9.png)
+![The Garden](../../assets/garden.png)
 
 The garden at his feet represents the Subconscious mind. The Subconscious is entirely impersonal. It is fertile soil that will grow weeds of fear just as efficiently as it grows the roses of desire if we let our attention wander. 
 
 The Life Power, channeled by the Magician's wand, provides the solar light needed for this garden to flourish according to the seeds he has planted. We see it giving life to both lilies and roses. Notice the hermetic axiom "As above, so below" in action: the desires Above (the 5 roses in the canopy) are mirrored below, where 5 corresponding roses bloom in the physical world. 
 
 ## The Tools on the Table
-[![The Tools on the Table](https://pasteboard.co/tyASHmNVBxfH.png)](https://pasteboard.co/tyASHmNVBxfH.png)
+![The Tools on the Table](../../assets/tools.png)
 
 These are the four elementary weapons, the mental tools required to achieve perfect, balanced manifestation on the physical plane:
 
