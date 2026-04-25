@@ -1,0 +1,48 @@
+<svg width="100" height="100" viewBox="0 0 100 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    path, circle { stroke: currentColor; stroke-width: 0.8; }
+  </style>
+  <!-- Sefirot Positions -->
+  <!-- Kether: 50, 10 -->
+  <!-- Chokmah: 80, 25 | Binah: 20, 25 -->
+  <!-- Chesed: 80, 55 | Geburah: 20, 55 -->
+  <!-- Tiphareth: 50, 70 -->
+  <!-- Netzach: 80, 100 | Hod: 20, 100 -->
+  <!-- Yesod: 50, 115 -->
+  <!-- Malkuth: 50, 145 (scaled to 130) -->
+
+  <!-- Horizontal Paths -->
+  <path d="M20 25 H80" /> <!-- Binah - Chokmah -->
+  <path d="M20 55 H80" /> <!-- Geburah - Chesed -->
+  <path d="M20 100 H80" /> <!-- Hod - Netzach -->
+
+  <!-- Vertical & Diagonal Paths -->
+  <path d="M50 10 L80 25 L80 55 L50 70 L20 55 L20 25 Z" />
+  <path d="M50 10 L20 25" />
+  <path d="M50 10 L50 70" />
+  
+  <path d="M80 25 L20 55" />
+  <path d="M20 25 L80 55" />
+  
+  <path d="M80 55 L80 100 L50 115 L20 100 L20 55 Z" />
+  <path d="M50 70 L50 115" />
+  <path d="M50 70 L80 100" />
+  <path d="M50 70 L20 100" />
+  
+  <path d="M80 55 L20 100" />
+  <path d="M20 55 L80 100" />
+  
+  <path d="M50 115 L50 140" />
+
+  <!-- Sefirot Circles -->
+  <circle cx="50" cy="10" r="4" fill="none" />
+  <circle cx="80" cy="25" r="4" fill="none" />
+  <circle cx="20" cy="25" r="4" fill="none" />
+  <circle cx="80" cy="55" r="4" fill="none" />
+  <circle cx="20" cy="55" r="4" fill="none" />
+  <circle cx="50" cy="70" r="4" fill="none" />
+  <circle cx="80" cy="100" r="4" fill="none" />
+  <circle cx="20" cy="100" r="4" fill="none" />
+  <circle cx="50" cy="115" r="4" fill="none" />
+  <circle cx="50" cy="140" r="4" fill="none" />
+</svg>
