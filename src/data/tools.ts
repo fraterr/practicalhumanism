@@ -3,6 +3,7 @@ import theledateLogo from '../assets/theledate.jpg';
 import liber777Logo from '../assets/liber777.svg';
 import cosLogo from '../assets/cos.svg';
 import yikingLogo from '../assets/yiking.png';
+import notetakerLogo from '../assets/notetaker.jpg';
 
 export interface Tool {
     id: string;
@@ -10,7 +11,7 @@ export interface Tool {
     description: string;
     icon: any; // Using the imported image object
     link: string;
-    categories: ('Gematria' | 'Divination' | 'Logic' | 'Thelema' | 'B.O.T.A.' | 'Qabalah' | 'Other')[];
+    categories: ('Gematria' | 'Divination' | 'Logic' | 'Thelema' | 'B.O.T.A.' | 'Qabalah' | 'Productivity' | 'Other')[];
 }
 
 export const tools: Tool[] = [
@@ -53,5 +54,13 @@ export const tools: Tool[] = [
         icon: yikingLogo,
         link: 'https://fraterr.github.io/yikingoracle',
         categories: ['Divination']
+    },
+    {
+        id: 'youtube-note-taker',
+        title: 'YouTube Note Taker PRO',
+        description: 'Firefox extension to integrate a distraction-free notepad directly into the YouTube player. It auto-pauses when you type, saves clickable timestamps, captures screenshots, and effortlessly exports your insights to PDF or Markdown.',
+        icon: notetakerLogo,
+        link: 'https://addons.mozilla.org/it/firefox/addon/youtube-note-taker-pro',
+        categories: ['Productivity']
     }
 ];
