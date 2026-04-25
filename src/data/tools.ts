@@ -1,6 +1,7 @@
 import scriptureLogo from '../assets/scripture.png';
 import theledateLogo from '../assets/theledate.jpg';
 import liber777Logo from '../assets/liber777.svg';
+import cosLogo from '../assets/cos.svg';
 
 export interface Tool {
     id: string;
@@ -8,7 +9,7 @@ export interface Tool {
     description: string;
     icon: any; // Using the imported image object
     link: string;
-    categories: ('Gematria' | 'Divination' | 'Logic' | 'Thelema' | 'Other')[];
+    categories: ('Gematria' | 'Divination' | 'Logic' | 'Thelema' | 'B.O.T.A.' | 'Qabalah' | 'Other')[];
 }
 
 export const tools: Tool[] = [
@@ -35,5 +36,13 @@ export const tools: Tool[] = [
         icon: liber777Logo,
         link: 'https://fraterr.github.io/Liber-777-Explorer/',
         categories: ['Thelema', 'Gematria']
+    },
+    {
+        id: 'cube-of-space',
+        title: 'Cube of Space 3D Explorer',
+        description: 'Cube of Space Explorer, according to the teachings of Paul Foster Case.',
+        icon: cosLogo,
+        link: 'https://fraterr.github.io/Cube-of-Space/',
+        categories: ['B.O.T.A.', 'Qabalah']
     }
 ];
