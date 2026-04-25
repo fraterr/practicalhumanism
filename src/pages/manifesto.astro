@@ -2,31 +2,105 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Manifesto | The Curved Crater">
-	<section>
+<BaseLayout title="Manifesto | Practical Humanism">
+	<section class="manifesto-content">
 		<h1>Manifesto</h1>
-		<blockquote>
-			"Technology is not the opposite of magic; it is its most recent evolution."
+		
+		<blockquote class="lead-quote">
+			"Man is a transitional being, he is not final; for in him and high beyond him ascend the radiant degrees which climb to a divine supermanhood." 
+			<cite>— Sri Aurobindo</cite>
 		</blockquote>
-		
-		<h2>The Vision</h2>
-		<p>
-			In an era of hyper-rationalism, we rediscover the sacred nature of the machine. 
-			The Curved Crater is built on the belief that code is a form of ritual, 
-			and software is a medium for manifesting intent into the physical world.
+
+		<p class="intro-text">
+			I stand where the Ageless Wisdom intersects with the exactitudes of modern logic. 
+			What I term <strong>Practical Humanism</strong> is no mere philosophical speculation; 
+			it is a definite, pragmatic Method for the deliberate unfolding of human potential.
 		</p>
-		
-		<h2>The Approach</h2>
-		<ul>
-			<li><strong>Simplicity:</strong> We strip away the unnecessary to reveal the core essence of the work.</li>
-			<li><strong>Integrity:</strong> Every line of code must serve a purpose beyond mere function.</li>
-			<li><strong>Exploration:</strong> We venture into the "curved" spaces of logic, where standard paradigms fail.</li>
-		</ul>
-		
+
+		<div class="manifesto-section">
+			<h2>The Law of Transition</h2>
+			<p>
+				I recognize that the present human form is not an ultimate completion, but an intermediate stage. 
+				The individual is the living bridge between the mechanical past and the radiant destiny of the True Self. 
+				My aim is to hasten this Great Work, passing consciously from the bondage of automatic reaction into the mastery of deliberate creation.
+			</p>
+		</div>
+
+		<div class="manifesto-section">
+			<h2>The Synergetic Instruments</h2>
+			<p>
+				I cast aside nothing of the ancient tools; rather, I adapt them to present necessities. 
+				Meditation, deliberate visualization, and concentrated contemplation are not relics of a dead past—they are the exact sciences of consciousness. 
+				The Tarot, the Qabalah, and Yoga are not superstitions; they are precise blueprints of the inner constitution of Man. 
+				By applying these traditional instruments with a strictly practical, testing attitude, I aim to awaken the dormant centers of the personality.
+			</p>
+		</div>
+
+		<div class="manifesto-section">
+			<h2>The Ultimate Aim</h2>
+			<p>
+				To make of my own vehicle a living laboratory of evolution. The Work demands the balanced development of the entire being: 
+				the purification of the mental body, the direction of the Will, and the conscious realization of the Indwelling Spirit. 
+				I take up the tools of the Builder, knowing that I am the sole architect of my own ascent.
+			</p>
+		</div>
+
 		<hr />
-		
-		<p>
-			Join us in the pursuit of a more meaningful digital existence.
-		</p>
 	</section>
 </BaseLayout>
+
+<style>
+	.manifesto-content {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	.lead-quote {
+		margin: 3rem 0;
+		font-size: 1.4rem;
+		line-height: 1.4;
+		border-left: 3px solid var(--accent-color);
+		padding-left: 2rem;
+	}
+	.lead-quote cite {
+		display: block;
+		margin-top: 1rem;
+		font-size: 1rem;
+		font-style: normal;
+		color: var(--accent-muted);
+		font-family: 'Inter', sans-serif;
+	}
+	.intro-text {
+		font-size: 1.2rem;
+		line-height: 1.8;
+		margin-bottom: 4rem;
+		color: var(--text-color);
+	}
+	.manifesto-section {
+		margin-bottom: 3.5rem;
+	}
+	.manifesto-section h2 {
+		color: var(--accent-color);
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		border-bottom: 1px solid var(--line-color);
+		display: inline-block;
+		margin-bottom: 1.5rem;
+	}
+	.manifesto-section p {
+		line-height: 1.8;
+	}
+
+	@media (max-width: 768px) {
+		.lead-quote {
+			font-size: 1.2rem;
+			padding-left: 1.5rem;
+		}
+		.intro-text {
+			font-size: 1.1rem;
+		}
+		.manifesto-section h2 {
+			font-size: 1.2rem;
+		}
+	}
+</style>
