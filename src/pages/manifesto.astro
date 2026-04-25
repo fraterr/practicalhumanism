@@ -3,86 +3,53 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Manifesto | Practical Humanism">
-	<article class="manifesto-container">
+	<article class="manifesto-wrapper">
 		<header class="manifesto-header reveal">
 			<h1>Manifesto</h1>
 		</header>
 		
-		<blockquote class="manifesto-quote reveal">
-			"Man is a transitional being, he is not final; for in him and high beyond him ascend the radiant degrees which climb to a divine supermanhood." 
-			<cite>— Sri Aurobindo</cite>
-		</blockquote>
+		<div class="manifesto-content reveal">
+			<blockquote class="lead-quote">
+				"Man is a transitional being, he is not final; for in him and high beyond him ascend the radiant degrees which climb to a divine supermanhood." 
+				<cite>— Sri Aurobindo</cite>
+			</blockquote>
 
-		<div class="manifesto-text">
-			<p class="emphasized reveal">
-				I stand where the Ageless Wisdom intersects<br />
-				with the exactitudes of modern logic.
-			</p>
-			
-			<p class="reveal">
-				What I term <strong>Practical Humanism</strong> is a definite,<br />
-				pragmatic Method for the deliberate unfolding<br />
-				of human potential.
-			</p>
-			
-			<p class="reveal">
-				I recognize that the present human form is not<br />
-				an ultimate completion, but an intermediate stage.
-			</p>
+			<div class="text-block">
+				<p>
+					I stand where the Ageless Wisdom intersects with the exactitudes of modern logic. 
+					What I term <strong>Practical Humanism</strong> is a definite, pragmatic Method for the deliberate unfolding of human potential. 
+					I recognize that the present human form is not an ultimate completion, but an intermediate stage.
+				</p>
+			</div>
 
-			<div class="sigil-separator reveal">
-				<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-					<!-- Skull Top -->
+			<div class="sigil-anchor">
+				<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
 					<path d="M12 2C7.58 2 4 5.58 4 10C4 12.5 5.2 14.7 7 16V20C7 21.1 7.9 22 9 22H15C16.1 22 17 21.1 17 20V16C18.8 14.7 20 12.5 20 10C20 5.58 16.42 2 12 2Z" />
-					<!-- Eyes -->
 					<circle cx="8.5" cy="10.5" r="1.5" fill="currentColor" />
 					<circle cx="15.5" cy="10.5" r="1.5" fill="currentColor" />
-					<!-- Nose -->
 					<path d="M12 13L11 15H13L12 13Z" fill="currentColor" />
-					<!-- Jaw Lines -->
 					<path d="M10 18H14" />
 					<path d="M9 22V20" />
 					<path d="M15 22V20" />
 				</svg>
 			</div>
 
-			<p class="middle-statement reveal">
-				I cast aside nothing of the ancient tools;<br />
-				rather, I adapt them to present necessities.
-			</p>
-
-			<p class="reveal">
-				By applying these traditional instruments with a strictly<br />
-				practical, testing attitude, I aim to awaken the<br />
-				dormant centers of the personality.
-			</p>
-
-			<div class="sigil-separator reveal">
-				<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-					<!-- Skull Top -->
-					<path d="M12 2C7.58 2 4 5.58 4 10C4 12.5 5.2 14.7 7 16V20C7 21.1 7.9 22 9 22H15C16.1 22 17 21.1 17 20V16C18.8 14.7 20 12.5 20 10C20 5.58 16.42 2 12 2Z" />
-					<!-- Eyes -->
-					<circle cx="8.5" cy="10.5" r="1.5" fill="currentColor" />
-					<circle cx="15.5" cy="10.5" r="1.5" fill="currentColor" />
-					<!-- Nose -->
-					<path d="M12 13L11 15H13L12 13Z" fill="currentColor" />
-					<!-- Jaw Lines -->
-					<path d="M10 18H14" />
-					<path d="M9 22V20" />
-					<path d="M15 22V20" />
-				</svg>
+			<div class="text-block">
+				<p>
+					I cast aside nothing of the ancient tools; rather, I adapt them to present necessities. 
+					By applying these traditional instruments with a strictly practical, testing attitude, 
+					I aim to awaken the dormant centers of the personality.
+				</p>
 			</div>
 
-			<p class="closing reveal">
-				The ultimate aim is to make of my own vehicle<br />
-				a living laboratory of evolution.
-			</p>
-			
-			<p class="closing-details reveal">
-				The Work demands the balanced development of the entire being:<br />
-				the purification of the mind, the direction of the Will,<br />
-				and the conscious realization of the Indwelling Spirit.
-			</p>
+			<div class="text-block closing">
+				<p>
+					The ultimate aim is to make of my own vehicle a living laboratory of evolution. 
+					The Work demands the balanced development of the entire being: 
+					the purification of the mind, the direction of the Will, 
+					and the conscious realization of the Indwelling Spirit.
+				</p>
+			</div>
 		</div>
 
 		<footer class="reveal">
@@ -91,10 +58,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	</article>
 
 	<script>
-		const observerOptions = {
-			threshold: 0.1
-		};
-
+		const observerOptions = { threshold: 0.1 };
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
@@ -108,102 +72,98 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-	.manifesto-container {
-		max-width: 800px;
+	.manifesto-wrapper {
+		max-width: 720px;
 		margin: 0 auto;
-		padding: 4rem 2rem;
+		padding: 6rem 2rem;
 	}
+
 	.manifesto-header {
 		text-align: center;
-		margin-bottom: 6rem;
+		margin-bottom: 5rem;
 	}
+
 	.manifesto-header h1 {
-		font-size: clamp(2rem, 8vw, 3.5rem);
-		letter-spacing: 0.4em;
+		font-size: clamp(2.5rem, 10vw, 3.5rem);
+		letter-spacing: 0.5em;
 		text-transform: uppercase;
-		color: var(--text-color);
-		margin: 0;
-		margin-right: -0.4em; /* Compensate for letter-spacing on the last character */
 		font-weight: 300;
-		white-space: nowrap;
+		margin: 0;
+		margin-right: -0.5em;
+		color: var(--text-color);
 	}
-	.manifesto-quote {
-		margin: 0 0 6rem 0;
-		font-size: 1.5rem;
-		line-height: 1.6;
-		font-style: italic;
-		color: var(--accent-muted);
+
+	.manifesto-content {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		align-items: center;
 		text-align: center;
+	}
+
+	.lead-quote {
+		font-family: 'Playfair Display', serif;
+		font-style: italic;
+		font-size: 1.4rem;
+		line-height: 1.6;
+		color: var(--accent-muted);
+		max-width: 600px;
+		margin: 0 0 2rem 0;
 		border: none;
 		padding: 0;
-		opacity: 0.8;
 	}
-	.manifesto-quote cite {
+
+	.lead-quote cite {
 		display: block;
-		margin-top: 2rem;
+		margin-top: 1.5rem;
 		font-size: 0.9rem;
 		font-style: normal;
 		letter-spacing: 0.3em;
 		text-transform: uppercase;
 		opacity: 0.6;
 	}
-	.manifesto-text {
-		font-size: 1.25rem;
+
+	.text-block {
+		font-size: 1.2rem;
 		line-height: 1.8;
 		color: var(--text-color);
-		text-align: center;
+		opacity: 0.9;
+		max-width: 100%;
 	}
-	.manifesto-text p {
-		margin-bottom: 3.5rem;
-		opacity: 0.85;
-		transition: opacity 0.5s ease;
-	}
-	.manifesto-text p strong {
-		color: var(--text-color);
-		opacity: 1;
-	}
-	.emphasized {
-		font-family: 'Playfair Display', serif;
-		font-size: 2rem;
-		line-height: 1.4;
-		color: var(--accent-color) !important;
-		opacity: 1 !important;
-	}
-	.middle-statement {
-		font-style: italic;
-		font-size: 1.6rem;
-		color: var(--text-color);
-	}
-	.sigil-separator {
-		margin: 6rem 0;
+
+	.text-block strong {
 		color: var(--accent-color);
-		display: flex;
-		justify-content: center;
-		opacity: 0.7;
+		font-weight: 500;
 	}
+
+	.sigil-anchor {
+		color: var(--accent-color);
+		opacity: 0.6;
+		margin: 1rem 0;
+	}
+
 	.closing {
 		font-family: 'Playfair Display', serif;
-		font-size: 2rem;
-		line-height: 1.4;
-		color: var(--accent-color) !important;
-		opacity: 1 !important;
-		margin-bottom: 1.5rem !important;
+		font-size: 1.35rem;
+		line-height: 1.7;
+		color: var(--accent-color);
+		border-top: 1px solid var(--line-color);
+		padding-top: 3rem;
+		margin-top: 1rem;
 	}
-	.closing-details {
-		font-size: 1.25rem;
-		opacity: 0.8;
-		line-height: 2;
-	}
+
 	footer hr {
-		margin-top: 8rem;
+		margin-top: 6rem;
 		opacity: 0.1;
+		border: none;
+		border-top: 1px solid var(--text-color);
 	}
 
 	/* Reveal Animation */
 	.reveal {
 		opacity: 0;
-		transform: translateY(20px);
-		transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+		transform: translateY(30px);
+		transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 	.reveal.active {
 		opacity: 1;
@@ -211,25 +171,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	}
 
 	@media (max-width: 768px) {
-		.manifesto-container {
-			padding: 2rem 1rem;
+		.manifesto-wrapper {
+			padding: 4rem 1.5rem;
+		}
+		.manifesto-header {
+			margin-bottom: 3rem;
 		}
 		.manifesto-header h1 {
-			font-size: 2rem;
-			letter-spacing: 0.2em;
-			margin-right: -0.2em;
+			letter-spacing: 0.3em;
+			margin-right: -0.3em;
 		}
-		.manifesto-quote {
+		.lead-quote {
+			font-size: 1.2rem;
+		}
+		.text-block {
 			font-size: 1.1rem;
 		}
-		.manifesto-text {
-			font-size: 1.1rem;
-		}
-		.emphasized, .closing {
-			font-size: 1.6rem;
-		}
-		.middle-statement {
-			font-size: 1.3rem;
+		.closing {
+			font-size: 1.2rem;
 		}
 	}
 </style>
