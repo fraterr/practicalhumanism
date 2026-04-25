@@ -2,6 +2,7 @@ import scriptureLogo from '../assets/scripture.png';
 import theledateLogo from '../assets/theledate.jpg';
 import liber777Logo from '../assets/liber777.svg';
 import cosLogo from '../assets/cos.svg';
+import yikingLogo from '../assets/yiking.png';
 
 export interface Tool {
     id: string;
@@ -44,5 +45,13 @@ export const tools: Tool[] = [
         icon: cosLogo,
         link: 'https://fraterr.github.io/Cube-of-Space/',
         categories: ['B.O.T.A.', 'Qabalah']
+    },
+    {
+        id: 'yi-king-oracle',
+        title: 'Yi-King Oracle',
+        description: "Digital oracle, based on Aleister Crowley's Liber 216, that provides mathematically precise hexagram generation.",
+        icon: yikingLogo,
+        link: 'https://fraterr.github.io/yikingoracle',
+        categories: ['Divination']
     }
 ];
