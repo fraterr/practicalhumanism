@@ -35,13 +35,21 @@ import separatorImg from '../assets/separator.png';
 				</p>
 			</div>
 
-			<div class="text-block closing">
-				<p>
-					The ultimate aim is to make of my own vehicle a living laboratory of evolution. 
-					The Work demands the balanced development of the entire being: 
-					the purification of the mind, the direction of the Will, 
-					and the conscious realization of the Indwelling Spirit.
-				</p>
+			<div class="closing-section">
+				<div class="aim-block">
+					<p>The ultimate aim is to make of my own vehicle<br />a living laboratory of evolution.</p>
+				</div>
+				
+				<div class="work-block">
+					<p class="work-intro">The Work demands the balanced development of the entire being:</p>
+					<div class="pillars">
+						<span class="pillar">the purification of the mind</span>
+						<span class="dot"></span>
+						<span class="pillar">the direction of the Will</span>
+						<span class="dot"></span>
+						<span class="pillar">the conscious realization of the Indwelling Spirit</span>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -142,14 +150,72 @@ import separatorImg from '../assets/separator.png';
 		filter: drop-shadow(0 0 5px rgba(196, 139, 93, 0.2));
 	}
 
-	.closing {
+	.closing-section {
+		width: 100%;
+		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+
+	.aim-block {
 		font-family: 'Playfair Display', serif;
-		font-size: 1.35rem;
-		line-height: 1.7;
+		font-size: 1.8rem;
+		line-height: 1.4;
 		color: var(--accent-color);
-		border-top: 1px solid var(--line-color);
-		padding-top: 3rem;
-		margin-top: 1rem;
+		position: relative;
+		padding: 3rem 0;
+	}
+
+	.aim-block::before, .aim-block::after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 1px;
+		background: var(--line-color);
+		opacity: 0.5;
+	}
+
+	.aim-block::before { top: 0; }
+	.aim-block::after { bottom: 0; }
+
+	.work-block {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.work-intro {
+		font-size: 1.1rem;
+		opacity: 0.6;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+	}
+
+	.pillars {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem 1.5rem;
+		font-size: 1.25rem;
+		font-style: italic;
+		color: var(--text-color);
+		opacity: 0.9;
+	}
+
+	.pillar {
+		position: relative;
+	}
+
+	.dot {
+		width: 4px;
+		height: 4px;
+		background: var(--accent-color);
+		border-radius: 50%;
+		opacity: 0.5;
 	}
 
 	footer hr {
@@ -189,6 +255,17 @@ import separatorImg from '../assets/separator.png';
 		}
 		.closing {
 			font-size: 1.2rem;
+		}
+		.aim-block {
+			font-size: 1.4rem;
+		}
+		.pillars {
+			flex-direction: column;
+			gap: 0.8rem;
+			font-size: 1.1rem;
+		}
+		.dot {
+			display: none;
 		}
 	}
 </style>
