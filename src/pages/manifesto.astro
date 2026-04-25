@@ -23,22 +23,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			</div>
 
 			<div class="sigil-anchor">
-				<svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
-					<!-- Main Cranium Structure -->
-					<path d="M50 10 L78 22 L88 48 L78 72 L50 90 L22 72 L12 48 L22 22 L50 10Z" />
-					<!-- Internal Facets -->
-					<path d="M50 10 V35 M22 22 L50 35 L78 22" opacity="0.6" />
-					<path d="M12 48 L35 48 L50 35 L65 48 L88 48" opacity="0.6" />
-					<!-- Eye Sockets (Hexagonal) -->
-					<path d="M25 40 L42 40 L45 52 L38 60 L28 60 L22 52 L25 40Z" fill="currentColor" fill-opacity="0.1" />
-					<path d="M75 40 L58 40 L55 52 L62 60 L72 60 L78 52 L75 40Z" fill="currentColor" fill-opacity="0.1" />
-					<!-- Nasal Cavity (Diamond) -->
-					<path d="M50 55 L44 65 L50 75 L56 65 L50 55Z" fill="currentColor" fill-opacity="0.2" />
-					<!-- Jaw/Teeth Structure -->
-					<path d="M35 75 L65 75 L60 85 L40 85 L35 75Z" />
-					<path d="M42 75 V85 M50 75 V85 M58 75 V85" opacity="0.8" />
-					<!-- Connection Lines -->
-					<path d="M22 72 L35 75 M78 72 L65 75" opacity="0.5" />
+				<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+					<!-- Cranium -->
+					<path d="M12 2C7.58 2 4 5.58 4 10C4 11.5 4.5 13 5.5 14C5 15 5 16 5.5 17C6 18.5 8 19.5 10 20C10.5 21 11.5 22 12 22C12.5 22 13.5 21 14 20C16 19.5 18 18.5 18.5 17C19 16 19 15 18.5 14C19.5 13 20 11.5 20 10C20 5.58 16.42 2 12 2Z" />
+					<!-- Eye Sockets -->
+					<circle cx="8.5" cy="10.5" r="2.5" />
+					<circle cx="15.5" cy="10.5" r="2.5" />
+					<!-- Nasal Cavity -->
+					<path d="M12 13L10.5 16H13.5L12 13Z" />
+					<!-- Teeth -->
+					<path d="M8 17H16" />
+					<path d="M9 17V19M11 17V20M13 17V20M15 17V19" />
 				</svg>
 			</div>
 
