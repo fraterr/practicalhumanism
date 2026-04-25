@@ -32,9 +32,11 @@ const { title, description, icon, link, category } = Astro.props;
 	.tool-card {
 		background: rgba(255, 255, 255, 0.02);
 		border: 1px solid rgba(196, 139, 93, 0.1);
-		padding: 2.5rem;
+		padding: 3rem 2rem;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		text-align: center;
 		gap: 1.5rem;
 		transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 		position: relative;
@@ -48,19 +50,26 @@ const { title, description, icon, link, category } = Astro.props;
 	}
 
 	.tool-icon {
-		opacity: 0.8;
+		opacity: 0.9;
 		transition: transform 0.4s ease;
+		margin-bottom: 1rem;
+	}
+
+	.tool-icon img {
+		border-radius: 12px;
+		object-fit: cover;
+		border: 1px solid rgba(196, 139, 93, 0.1);
 	}
 
 	.tool-card:hover .tool-icon {
-		transform: scale(1.1);
+		transform: scale(1.05);
 		opacity: 1;
 	}
 
 	.category {
 		font-size: 0.7rem;
 		text-transform: uppercase;
-		letter-spacing: 0.2em;
+		letter-spacing: 0.25em;
 		color: var(--accent-color);
 		opacity: 0.6;
 		display: block;
@@ -69,8 +78,8 @@ const { title, description, icon, link, category } = Astro.props;
 
 	h3 {
 		font-family: 'Playfair Display', serif;
-		font-size: 1.6rem;
-		margin: 0 0 1rem 0;
+		font-size: 1.7rem;
+		margin: 0 0 0.75rem 0;
 		color: var(--text-color);
 	}
 
@@ -80,17 +89,18 @@ const { title, description, icon, link, category } = Astro.props;
 		color: var(--text-color);
 		opacity: 0.7;
 		margin: 0 0 2rem 0;
+		max-width: 260px;
 	}
 
 	.tool-link {
 		display: inline-block;
-		font-size: 0.9rem;
-		letter-spacing: 0.1em;
+		font-size: 0.85rem;
+		letter-spacing: 0.15em;
 		text-transform: uppercase;
 		color: var(--accent-color);
 		font-weight: 500;
 		border-bottom: 1px solid transparent;
-		padding-bottom: 2px;
+		padding-bottom: 4px;
 	}
 
 	.tool-link:hover {
