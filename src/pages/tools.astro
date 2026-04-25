@@ -1,33 +1,120 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ToolCard from '../components/ToolCard.astro';
+import { tools } from '../data/tools';
 ---
 
 <BaseLayout title="Tools | Practical Humanism">
-	<section>
-		<h1>Tools & Artifacts</h1>
-		<p>
-			A collection of digital instruments designed for observation, calculation, and contemplation.
-		</p>
-		
-		<hr />
-		
-		<div class="artifact">
-			<h2>Digital Pendulum</h2>
-			<p>A simple algorithm for chaotic oscillation.</p>
-			<pre><code>{`function oscillate(t) {
-  return Math.sin(t * Math.PI / 180) * Math.exp(-0.01 * t);
-}`}</code></pre>
+	<div class="tools-container">
+		<header class="tools-header reveal">
+			<h1>Tools & Artifacts</h1>
+			<p>
+				A curated collection of digital instruments designed for observation, 
+				calculation, and the pragmatic unfolding of human potential.
+			</p>
+		</header>
+
+		<div class="tools-grid">
+			{tools.map(tool => (
+				<ToolCard 
+					title={tool.title}
+					description={tool.description}
+					icon={tool.icon}
+					link={tool.link}
+					category={tool.category}
+				/>
+			))}
 		</div>
-		
-		<div class="artifact">
-			<h2>Gematria Engine</h2>
-			<p><em>Coming soon.</em> A calculator for numeric linguistic analysis.</p>
-		</div>
-		
-		<hr />
-		
-		<p>
-			These tools are provided as-is, for those who know how to use them.
-		</p>
-	</section>
+
+		<footer class="tools-footer reveal">
+			<p>
+				These tools are refined through use. More artifacts will emerge as the Work progresses.
+			</p>
+		</footer>
+	</div>
+
+	<script>
+		const observerOptions = { threshold: 0.1 };
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('active');
+				}
+			});
+		}, observerOptions);
+
+		document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+	</script>
 </BaseLayout>
+
+<style>
+	.tools-container {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 6rem 2rem;
+	}
+
+	.tools-header {
+		text-align: center;
+		margin-bottom: 6rem;
+	}
+
+	.tools-header h1 {
+		font-size: clamp(2.5rem, 8vw, 3.5rem);
+		letter-spacing: 0.4em;
+		text-transform: uppercase;
+		margin-bottom: 2rem;
+		font-weight: 300;
+	}
+
+	.tools-header p {
+		font-size: 1.2rem;
+		max-width: 600px;
+		margin: 0 auto;
+		opacity: 0.7;
+		line-height: 1.8;
+	}
+
+	.tools-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+		gap: 2rem;
+		margin-bottom: 8rem;
+	}
+
+	.tools-footer {
+		text-align: center;
+		padding-top: 4rem;
+		border-top: 1px solid rgba(196, 139, 93, 0.1);
+	}
+
+	.tools-footer p {
+		font-size: 1rem;
+		font-style: italic;
+		opacity: 0.5;
+	}
+
+	/* Reveal Animation */
+	.reveal {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	.reveal.active {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	@media (max-width: 768px) {
+		.tools-container {
+			padding: 4rem 1.5rem;
+		}
+		.tools-header {
+			margin-bottom: 4rem;
+		}
+		.tools-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+	}
+</style>
