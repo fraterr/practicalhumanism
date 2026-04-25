@@ -9,19 +9,11 @@ export interface Tool {
 
 export const tools: Tool[] = [
     {
-        id: 'digital-pendulum',
-        title: 'Digital Pendulum',
-        description: 'A precise algorithm for chaotic oscillation and rhythmic contemplation.',
-        icon: '/assets/separator.png', // Using the existing skull as a placeholder icon
-        link: '#',
-        category: 'Logic'
-    },
-    {
-        id: 'gematria-engine',
-        title: 'Gematria Engine',
-        description: 'An advanced calculator for numeric linguistic analysis and esoteric research.',
-        icon: '/assets/separator.png',
-        link: '#',
+        id: 'scripture-code',
+        title: 'Scripture Code',
+        description: 'An explorer to study and search Bible Gematria.',
+        icon: '/assets/scripture.png',
+        link: 'https://scripturecode.org/explorer',
         category: 'Gematria'
     }
 ];
