@@ -12,7 +12,7 @@ interface Props {
 const { title, description, icon, link, categories } = Astro.props;
 ---
 
-<div class="tool-card reveal">
+<div class="tool-card reveal" data-categories={categories.join(',')}>
 	<div class="tool-icon">
 		{typeof icon === 'string' ? (
 			<img src={icon.startsWith('http') ? icon : (import.meta.env.BASE_URL + icon)} alt={title} width="64" height="64" />
