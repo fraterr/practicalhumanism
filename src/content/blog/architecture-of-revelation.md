@@ -35,6 +35,8 @@ He recognized that the mind is not a static machine. It develops, understanding 
 
 The technique suggested by Gödel for gaining knowledge of abstract ideas is based on "meaning clarification," a phenomenologically derived method that goes beyond the mere mechanical manipulation of graphic symbols. This technique consists of concentrating intensely on concepts by directing attention not toward concrete signs, but toward our own cognitive acts and the mental faculties aimed at their use. Through this reflective examination, and by utilizing related tools such as "free variation in imagination"—which is the act of freely varying a mental instance to trace its constant structural limits—the mind is able to isolate the essential and invariant properties of a concept. For Gödel, this exercise is not a static process, but an activity of continuous development capable of generating a new state of consciousness that can directly perceive the objectivity and inexhaustibility of pure ideas.
 
+![Key 17](../../assets/key17.jpg)
+
 ## Establishing a Continuous Flow of Knowledge
 
 How do I apply this synthesis practically to establish a continuous flow of knowledge regarding these Pure Meanings? I break it down into a precise protocol:
