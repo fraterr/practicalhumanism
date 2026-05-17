@@ -2,7 +2,7 @@
 title: "The Architecture of Revelation: Paul Foster Case, Psychonetics, and Gödel"
 description: "A synthesis of Paul Foster Case's esoteric methods with Psychonetics and Gödel's philosophy on direct intuition and abstract revelation."
 pubDate: "May 17 2026"
-heroImage: "/banner godel psychonetics.png"
+heroImage: "../../assets/banner godel psychonetics.png"
 ---
 
 In my ongoing work blending systematic logical frameworks with esoteric philosophy, I continually return to the teachings of Paul Foster Case. Case defines concentration as the unwavering fixation of attention upon a single point or symbol. Meditation, in his system, is the unbroken flow of consciousness that logically follows. It is a state where my mind merges with the object, penetrating far beyond its superficial imagery to grasp its inner, esoteric reality.
