@@ -5,9 +5,9 @@ pubDate: "May 17 2026"
 heroImage: "../../assets/banner godel psychonetics.png"
 ---
 
-In my ongoing work blending systematic logical frameworks with esoteric philosophy, I continually return to the teachings of Paul Foster Case. Case defines concentration as the unwavering fixation of attention upon a single point or symbol. Meditation, in his system, is the unbroken flow of consciousness that logically follows. It is a state where my mind merges with the object, penetrating far beyond its superficial imagery to grasp its inner, esoteric reality.
+In my ongoing work blending systematic logical frameworks with esoteric philosophy, I continually return to the teachings of [Paul Foster Case](https://en.wikipedia.org/wiki/Paul_Foster_Case). Case defines concentration as the unwavering fixation of attention upon a single point or symbol. Meditation, in his system, is the unbroken flow of consciousness that logically follows. It is a state where my mind merges with the object, penetrating far beyond its superficial imagery to grasp its inner, esoteric reality.
 
-However, a practical hurdle frequently arises for those studying Case's methods: how exactly does one transition from staring at a symbol to experiencing that continuous, revelatory flow of knowledge? I have found that the answer lies in understanding the precise mechanics of perception and abstraction. To decode this, I look to two seemingly disparate fields that seamlessly overlap with esoteric practice: the psychological engineering of Psychonetics and the mathematical philosophy of Kurt Gödel.
+However, a practical hurdle frequently arises for those studying Case's methods: how exactly does one transition from staring at a symbol to experiencing that continuous, revelatory flow of knowledge? I have found that the answer lies in understanding the precise mechanics of perception and abstraction. To decode this, I look to two seemingly disparate fields that seamlessly overlap with esoteric practice: the psychological engineering of Psychonetics and the mathematical philosophy of [Kurt Gödel](https://en.wikipedia.org/wiki/Kurt_G%C3%B6del).
 
 ![Psychonetics](../../assets/pnetics.jpg)
 
@@ -19,7 +19,7 @@ In the discipline of Psychonetics, there is a core concept known as "Pure Meanin
 
 To reach this state, Psychonetics utilizes an operation called "folding." If I want to fold an entity I must intentionally strip away my sensory perception and verbal labels. I isolate the pure meaning sensation directly.
 
-I do not meditate *on* the imagery of the Tarot card; rather, I concentrate on it to gather its boundaries, and then I *fold* it. I de-verbalize and de-visualize the symbol in my mind until only its pure, abstract, semantic quality remains.
+I do not meditate *on* the imagery of the [Tarot](https://en.wikipedia.org/wiki/Tarot) card; rather, I concentrate on it to gather its boundaries, and then I *fold* it. I de-verbalize and de-visualize the symbol in my mind until only its pure, abstract, semantic quality remains.
 
 Imagine having a concept on the tip of your tongue: you know exactly what it means and you intuitively grasp its profound essence, but the words to express it simply refuse to emerge. This sensation of naked knowing, in the total absence of language or visual imagery, is a spontaneous experience of a *pure meaning*. To replicate this voluntarily using psychonetics, try thinking of a green triangle. If you intentionally strip away the mental image of the shape, the color, and the word itself, that abstract, dimensionless mental residue that remains is the pure meaning of the concept.
 
@@ -35,7 +35,7 @@ Another way to get in touch with pure meanings is the following one:
 
 ## Gödel and the Intuition of the Abstract
 
-Kurt Gödel, through the profound implications of his incompleteness theorems, proved that mechanical, purely formal systems cannot capture all truths. He argued compellingly that the human mind possesses a unique capacity: the direct intuition or "perception" of abstract concepts.
+Kurt Gödel, through the profound implications of his [incompleteness theorems](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems), proved that mechanical, purely formal systems cannot capture all truths. He argued compellingly that the human mind possesses a unique capacity: the direct intuition or "perception" of abstract concepts.
 
 Gödel maintained that understanding profound truths requires moving past the physical symbols on a page. He insisted that I must reflect upon the *meanings* involved, rather than the combinatorial properties of the concrete symbols themselves. Gödel called this "meaning clarification"—concentrating intensely on the concepts to produce a new state of consciousness that perceives invariant realities.
 
