@@ -19,9 +19,13 @@ I do not meditate *on* the imagery of the Tarot card; rather, I concentrate on i
 
 Imagine having a concept on the tip of your tongue: you know exactly what it means and you intuitively grasp its profound essence, but the words to express it simply refuse to emerge. This sensation of naked knowing, in the total absence of language or visual imagery, is a spontaneous experience of a *pure meaning*. To replicate this voluntarily using psychonetics, try thinking of a green triangle. If you intentionally strip away the mental image of the shape, the color, and the word itself, that abstract, dimensionless mental residue that remains is the pure meaning of the concept.
 
-Another way to get in touch with pure meanings is the following one (quote from Psychonetics, by Igor Kusakov):
-"A slightly jarring but effective way to notice the mental layer where pure meanings exist is by exposing it to contradictory sensory unput. Such input often triggers a strong rejection reaction, which provides an opportunity to consciously observe the place where the rejection comes from.
-The practitioner briefly observes the provided images and notices the sensation of rejection they evoke."
+Another way to get in touch with pure meanings is the following one:
+
+> "A slightly jarring but effective way to notice the mental layer where pure meanings exist is by exposing it to contradictory sensory input. Such input often triggers a strong rejection reaction, which provides an opportunity to consciously observe the place where the rejection comes from.
+>
+> The practitioner briefly observes the provided images and notices the sensation of rejection they evoke."
+>
+> — **Igor Kusakov**, *Psychonetics* (p. 66)
 
 ![Contradictory sensory input](../../assets/reject.png)
 
