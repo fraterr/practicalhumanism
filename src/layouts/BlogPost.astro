@@ -45,7 +45,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	</article>
 
 	<script>
-		const observerOptions = { threshold: 0.1 };
+		const observerOptions = { threshold: 0, rootMargin: '0px 0px -50px 0px' };
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
