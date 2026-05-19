@@ -69,7 +69,7 @@ export const tools: Tool[] = [
         title: 'B.O.T.A. Tree of Life',
         description: 'Interactive study guide and contemplation tool dedicated to the Builders of the Adytum (B.O.T.A.) system of Hermetic Qabalah. It maps the 10 Sephiroth (Emanations) and the 22 Paths of Wisdom, which correspond to the 22 letters of the Hebrew alphabet and the 22 Keys of the Tarot Major Arcana.',
         icon: treeOfLifeLogo,
-        link: '/tree-of-life',
+        link: 'https://fraterr.github.io/B.O.T.A.-Tree-of-Life/',
         categories: ['B.O.T.A.', 'Qabalah']
     }
 ];
