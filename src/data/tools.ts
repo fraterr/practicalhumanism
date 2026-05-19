@@ -62,5 +62,21 @@ export const tools: Tool[] = [
         icon: notetakerLogo,
         link: 'https://addons.mozilla.org/it/firefox/addon/youtube-note-taker-pro',
         categories: ['Productivity']
+    },
+    {
+        id: 'tree-of-life',
+        title: 'Cabalistic Tree of Life',
+        description: 'Interactive visualization of the Cabalistic Tree of Life, featuring the 10 Sephiroth and 22 Paths with their corresponding Hebrew letters.',
+        icon: liber777Logo,
+        link: '/tree-of-life',
+        categories: ['Qabalah']
+    },
+    {
+        id: 'bota-tree-of-life',
+        title: 'B.O.T.A. Tree of Life',
+        description: 'Interactive study guide and contemplation tool dedicated to the Builders of the Adytum (B.O.T.A.) system of Hermetic Qabalah. It maps the 10 Sephiroth (Emanations) and the 22 Paths of Wisdom, which correspond to the 22 letters of the Hebrew alphabet and the 22 Keys of the Tarot Major Arcana.',
+        icon: cosLogo,
+        link: 'https://fraterr.github.io/B.O.T.A.-Tree-of-Life',
+        categories: ['B.O.T.A.', 'Qabalah']
     }
 ];

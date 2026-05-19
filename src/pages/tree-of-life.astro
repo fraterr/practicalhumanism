@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TreeOfLife from '../components/TreeOfLife.astro';
+---
+
+<BaseLayout title="Cabalistic Tree of Life | Practical Humanism" description="Interactive exploration of the Cabalistic Tree of Life and its interconnected Sephiroth and Paths.">
+  <main class="tree-page">
+    <header class="tree-header reveal">
+      <h1>Tree of Life</h1>
+      <p>Etz Chaim (עץ חיים) - The map of creation and consciousness.</p>
+    </header>
+
+    <section class="tree-content reveal">
+      <TreeOfLife />
+    </section>
+
+    <footer class="tree-footer reveal">
+      <p>
+        Interact with the Sephiroth and the 22 Paths to explore their corresponding 
+        intelligences and Hebrew letters.
+      </p>
+      <a href="/tools" class="back-link">← Return to Tools</a>
+    </footer>
+  </main>
+
+  <script>
+    const observerOptions = { threshold: 0, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</BaseLayout>
+
+<style>
+  .tree-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tree-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .tree-header h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  .tree-header p {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+
+  .tree-content {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .tree-footer {
+    text-align: center;
+    border-top: 1px solid rgba(196, 139, 93, 0.2);
+    padding-top: 3rem;
+    max-width: 600px;
+  }
+
+  .tree-footer p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .back-link:hover {
+    border-bottom-color: var(--accent-color);
+    opacity: 0.8;
+  }
+
+  /* Reveal Animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .tree-page {
+      padding: 4rem 1rem;
+    }
+    .tree-header {
+      margin-bottom: 2rem;
+    }
+  }
+</style>

@@ -1,0 +1,264 @@
+---
+// src/components/TreeOfLife.astro
+
+const sephiroth = [
+  { id: 1, name: "Kether", hebrew: "כתר", color: "#ffffff", cx: 500, cy: 100, textColor: "#000000" },
+  { id: 2, name: "Chokmah", hebrew: "חכמה", color: "#e2e8f0", cx: 750, cy: 250, textColor: "#000000" },
+  { id: 3, name: "Binah", hebrew: "בינה", color: "#111111", cx: 250, cy: 250, textColor: "#ffffff" },
+  { id: 4, name: "Chesed", hebrew: "חסד", color: "#2563eb", cx: 750, cy: 450, textColor: "#ffffff" },
+  { id: 5, name: "Geburah", hebrew: "גבורה", color: "#dc2626", cx: 250, cy: 450, textColor: "#ffffff" },
+  { id: 6, name: "Tiphareth", hebrew: "תפארת", color: "#facc15", cx: 500, cy: 600, textColor: "#000000" },
+  { id: 7, name: "Netzach", hebrew: "נצח", color: "#16a34a", cx: 750, cy: 850, textColor: "#ffffff" },
+  { id: 8, name: "Hod", hebrew: "הוד", color: "#f97316", cx: 250, cy: 850, textColor: "#000000" },
+  { id: 9, name: "Yesod", hebrew: "יסוד", color: "#7c3aed", cx: 500, cy: 950, textColor: "#ffffff" },
+  // Malkuth is handled specially, we provide coordinates and text details
+  { id: 10, name: "Malkuth", hebrew: "מלכות", cx: 500, cy: 1150, textColor: "#ffffff", special: true },
+];
+
+const paths = [
+  { id: 11, letter: "א", name: "Aleph", from: 1, to: 2 },
+  { id: 12, letter: "ב", name: "Beth", from: 1, to: 3 },
+  { id: 13, letter: "ג", name: "Gimel", from: 1, to: 6 },
+  { id: 14, letter: "ד", name: "Daleth", from: 2, to: 3 },
+  { id: 15, letter: "ה", name: "Heh", from: 2, to: 6 },
+  { id: 16, letter: "ו", name: "Vav", from: 2, to: 4 },
+  { id: 17, letter: "ז", name: "Zain", from: 3, to: 6 },
+  { id: 18, letter: "ח", name: "Cheth", from: 3, to: 5 },
+  { id: 19, letter: "ט", name: "Teth", from: 4, to: 5 },
+  { id: 20, letter: "י", name: "Yod", from: 4, to: 6 },
+  { id: 21, letter: "כ", name: "Kaph", from: 4, to: 7 },
+  { id: 22, letter: "ל", name: "Lamed", from: 5, to: 6 },
+  { id: 23, letter: "מ", name: "Mem", from: 5, to: 8 },
+  { id: 24, letter: "נ", name: "Nun", from: 6, to: 7 },
+  { id: 25, letter: "ס", name: "Samekh", from: 6, to: 9 },
+  { id: 26, letter: "ע", name: "Ayin", from: 6, to: 8 },
+  { id: 27, letter: "פ", name: "Peh", from: 7, to: 8 },
+  { id: 28, letter: "צ", name: "Tzaddi", from: 7, to: 9 },
+  { id: 29, letter: "ק", name: "Qoph", from: 7, to: 10 },
+  { id: 30, letter: "ר", name: "Resh", from: 8, to: 9 },
+  { id: 31, letter: "ש", name: "Shin", from: 8, to: 10 },
+  { id: 32, letter: "ת", name: "Tav", from: 9, to: 10 },
+];
+
+const pathsWithCoords = paths.map(p => {
+  const nodeFrom = sephiroth.find(s => s.id === p.from)!;
+  const nodeTo = sephiroth.find(s => s.id === p.to)!;
+  return {
+    ...p,
+    x1: nodeFrom.cx,
+    y1: nodeFrom.cy,
+    x2: nodeTo.cx,
+    y2: nodeTo.cy,
+    midX: (nodeFrom.cx + nodeTo.cx) / 2,
+    midY: (nodeFrom.cy + nodeTo.cy) / 2,
+  };
+});
+
+const R = 60; // Sephiroth radius
+---
+
+<div class="tree-container">
+  <svg viewBox="0 0 1000 1300" class="cabalistic-tree" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="8" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+      <filter id="glow-path" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="4" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+
+    {/* Render Paths */}
+    <g class="paths">
+      {pathsWithCoords.map((p) => (
+        <g class="path-group" tabindex="0">
+          <line 
+            x1={p.x1} y1={p.y1} x2={p.x2} y2={p.y2} 
+            stroke="#c48b5d" 
+            stroke-width="12" 
+            class="tree-path"
+          />
+          {/* Background for letter to make it readable */}
+          <circle cx={p.midX} cy={p.midY} r="18" fill="#1a1a1a" class="path-label-bg" />
+          <text 
+            x={p.midX} 
+            y={p.midY} 
+            fill="#e2e8f0" 
+            font-size="22" 
+            text-anchor="middle" 
+            dominant-baseline="central"
+            class="path-hebrew"
+          >{p.letter}</text>
+          
+          {/* Tooltip trigger area */}
+          <line 
+            x1={p.x1} y1={p.y1} x2={p.x2} y2={p.y2} 
+            stroke="transparent" 
+            stroke-width="40" 
+            class="path-hover-area"
+          />
+          
+          {/* Hover popup for path info */}
+          <g class="path-tooltip">
+            <rect x={p.midX + 25} y={p.midY - 25} width="160" height="50" rx="4" fill="rgba(0,0,0,0.85)" stroke="#c48b5d" />
+            <text x={p.midX + 35} y={p.midY} fill="#fff" font-size="14" dominant-baseline="central">
+              {p.id}. {p.name} ({p.letter})
+            </text>
+          </g>
+        </g>
+      ))}
+    </g>
+
+    {/* Render Sephiroth */}
+    <g class="sephiroth">
+      {sephiroth.map((s) => (
+        <g class="sephirah-group" tabindex="0">
+          {s.special ? (
+            /* Malkuth special rendering */
+            <g transform={`translate(${s.cx}, ${s.cy})`} filter="url(#glow)">
+              <circle r={R} fill="#000" />
+              {/* Top - Citrine */}
+              <path d="M -42.426,-42.426 A 60 60 0 0 1 42.426,-42.426 L 0,0 Z" fill="#fef08a" />
+              {/* Right - Olive */}
+              <path d="M 42.426,-42.426 A 60 60 0 0 1 42.426,42.426 L 0,0 Z" fill="#6b8e23" />
+              {/* Bottom - Indigo */}
+              <path d="M 42.426,42.426 A 60 60 0 0 1 -42.426,42.426 L 0,0 Z" fill="#312e81" />
+              {/* Left - Rust */}
+              <path d="M -42.426,42.426 A 60 60 0 0 1 -42.426,-42.426 L 0,0 Z" fill="#b45309" />
+              <circle r={R} fill="transparent" stroke="#e2e8f0" stroke-width="2" />
+            </g>
+          ) : (
+            <circle cx={s.cx} cy={s.cy} r={R} fill={s.color} class="sephirah-circle" filter="url(#glow)" />
+          )}
+
+          <text x={s.cx} y={s.cy - 12} fill={s.textColor} font-size="28" font-weight="bold" text-anchor="middle" class="sephirah-hebrew">
+            {s.hebrew}
+          </text>
+          <text x={s.cx} y={s.cy + 20} fill={s.textColor} font-size="16" text-anchor="middle" font-family="'Playfair Display', serif" class="sephirah-name">
+            {s.name}
+          </text>
+          
+          <g class="sephirah-tooltip">
+            <rect x={s.cx + R + 10} y={s.cy - 20} width="120" height="40" rx="4" fill="rgba(0,0,0,0.85)" stroke={s.special ? '#fef08a' : s.color} />
+            <text x={s.cx + R + 20} y={s.cy} fill="#fff" font-size="14" dominant-baseline="central">
+              {s.id}. {s.name}
+            </text>
+          </g>
+        </g>
+      ))}
+    </g>
+  </svg>
+</div>
+
+<style>
+  .tree-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cabalistic-tree {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(196, 139, 93, 0.15));
+  }
+
+  /* Interactive Elements */
+  .sephirah-group {
+    cursor: pointer;
+    outline: none;
+  }
+
+  .sephirah-circle {
+    transition: all 0.3s ease;
+    stroke: rgba(255, 255, 255, 0.3);
+    stroke-width: 2px;
+  }
+
+  .sephirah-group:hover .sephirah-circle,
+  .sephirah-group:focus .sephirah-circle {
+    stroke: #ffffff;
+    stroke-width: 4px;
+    filter: url(#glow) brightness(1.2);
+  }
+  
+  .sephirah-group:hover path,
+  .sephirah-group:focus path {
+    filter: brightness(1.2);
+  }
+
+  .tree-path {
+    transition: all 0.3s ease;
+    stroke-linecap: round;
+    opacity: 0.8;
+  }
+
+  .path-label-bg {
+    transition: all 0.3s ease;
+    stroke: #c48b5d;
+    stroke-width: 1.5;
+  }
+
+  .path-hebrew {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    pointer-events: none;
+  }
+
+  .path-group {
+    cursor: pointer;
+    outline: none;
+  }
+
+  .path-group:hover .tree-path,
+  .path-group:focus .tree-path {
+    stroke: #e8b07e;
+    stroke-width: 16px;
+    opacity: 1;
+    filter: url(#glow-path);
+  }
+
+  .path-group:hover .path-label-bg,
+  .path-group:focus .path-label-bg {
+    fill: #c48b5d;
+    stroke: #ffffff;
+  }
+
+  .path-group:hover .path-hebrew,
+  .path-group:focus .path-hebrew {
+    fill: #000000;
+    font-weight: bold;
+  }
+
+  .sephirah-name {
+    pointer-events: none;
+    letter-spacing: 0.05em;
+  }
+  
+  .sephirah-hebrew {
+    pointer-events: none;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  /* Tooltips */
+  .path-tooltip, .sephirah-tooltip {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .path-group:hover .path-tooltip,
+  .sephirah-group:hover .sephirah-tooltip {
+    opacity: 1;
+  }
+</style>
