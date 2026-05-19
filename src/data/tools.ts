@@ -4,6 +4,7 @@ import liber777Logo from '../assets/liber777.svg';
 import cosLogo from '../assets/cos.svg';
 import yikingLogo from '../assets/yiking.png';
 import notetakerLogo from '../assets/notetaker.jpg';
+import treeOfLifeLogo from '../assets/tree-of-life.png';
 
 export interface Tool {
     id: string;
@@ -67,7 +68,7 @@ export const tools: Tool[] = [
         id: 'bota-tree-of-life',
         title: 'B.O.T.A. Tree of Life',
         description: 'Interactive study guide and contemplation tool dedicated to the Builders of the Adytum (B.O.T.A.) system of Hermetic Qabalah. It maps the 10 Sephiroth (Emanations) and the 22 Paths of Wisdom, which correspond to the 22 letters of the Hebrew alphabet and the 22 Keys of the Tarot Major Arcana.',
-        icon: liber777Logo,
+        icon: treeOfLifeLogo,
         link: '/tree-of-life',
         categories: ['B.O.T.A.', 'Qabalah']
     }
